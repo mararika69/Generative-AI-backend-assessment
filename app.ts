@@ -11,7 +11,7 @@ import swaggerUi from 'swagger-ui-express';
 import swaggerOptions from './swagger';
 import chat from './src/routes/chat'
 import cors from "cors";
-
+import certificate from './src/routes/certificate'
 
 // Middleware setup
 app.use(express.json());
@@ -29,6 +29,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Routes setup
 app.use('/api/auth', auth)
 app.use('/api/chat', chat)
+app.use('/api/certificate', certificate)
 
 
 // Start server
